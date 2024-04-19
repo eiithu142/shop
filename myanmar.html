@@ -30,14 +30,17 @@
 
     <div class="all">
 <ul>
-  <li>  <a href="home.html"><h5>HOME <i class="bi bi-house-door-fill"></i></h5></a></li>
- 
+  <li>  <a href="myanmar.html"><h6>Myanmar dress </h6></a></li>
+  <li>  <a href="shan.html"><h6>Shan dress </h6></a></li>
+  <li>  <a href="kachin.html"><h6>Kachin dress </h6></a></li>
+
  <li>
-    <a href=""><h5>All Dress <i class="bi bi-chevron-double-down"></i></h5></a>
+    <a href=""><h6>More<i class="bi bi-chevron-double-down"></i></h6></a>
     <ul class="dropdown">
-        <li><a href="kachin.html"><h6>Kachin        </h6></a></li>
+        <li><a href="karen.html"><h6>Karen      </h6></a></li>
         <li><a href="shan.html"><h6>Shan        </h6></a></li>
-                <li><a href=""><h6>Contact us</h6></a></li>
+        <li><a href="mon.html"><h6>Mon        </h6></a></li>
+
 
         <li><a href=""><h6>Telegram contact</h6></a></li>
         <li><a href=""><h6>Contact us</h6></a></li>
@@ -52,6 +55,7 @@
         <div class="item">
             <a href="myanmardress.jpg"><img src="myanmardress.jpg"width="100"></a>
             <h5>myanmardress</h5>
+            <p>instock</p>
             <p>Lb 130</p>
             <p>Code No.1</p>
             <p>$100</p>
@@ -59,6 +63,8 @@
         <div class="item">
             <a href="myanmardress2.jpg"><img src="myanmardress2.jpg"width="100"></a>
             <h5>myanmardress</h5>
+            <p>order</p>
+
             <p>Lb 130</p>
             <p>Code No.2</p>
             <p>$100</p>
@@ -141,7 +147,7 @@
         background-color: aqua;
     }
     .baby{
-        background-color: rgb(222, 255, 33);
+        background-color: #E59BE9;
     }
     .item{
         align-items: center;
@@ -155,10 +161,12 @@
      }
      @media(max-width:500px){
         .container{
-            grid-template-columns: repeat(2,120px);
+            grid-template-columns: repeat(2,150px);
         }
      }
-   
+   body{
+    margin-top: -20px;
+   }
    
     
   h1{
@@ -184,7 +192,7 @@
     border: 1px solid black;
 }
 h5{
-    font-size: 13px;
+    font-size: 15px;
 }
     *{
     padding: 0;
@@ -193,7 +201,7 @@ h5{
 }
 ul{
     list-style: none;
-    background: gray;
+    background: #FFF67E;
 }
 ul li{
     display: inline-block;
@@ -202,7 +210,7 @@ ul li{
 ul li a{
     display: block;
     padding: 20px 25px;
-    color: aliceblue;
+    color: black;
     text-decoration: none;
     text-align: center;
     font-size: 15px;
@@ -213,7 +221,7 @@ ul li ul.dropdown li {
 ul li ul.dropdown  {
     display: none;
     width: 100%;
-    background: orange;
+    background: #F8F6E3;
     z-index: 999;
     position: absolute;
 }
@@ -223,6 +231,7 @@ background: gray;
 ul li:hover ul.dropdown {
 display: block;
 }
+
 </style>
 <script>
 

@@ -1,57 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Location</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Restriction</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Live Location</h1>
-    <p id="location">Getting location...</p>
-  </div>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <p id="visitorMessage">Only registered users can access this website.</p>
+    </div>
 
-  <script >
-    function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
-  }
+    <script>
+      // Check if user is logged in
+const isLoggedIn = true; // Change this to your logic for checking if the user is logged in
+
+// Update the visitor message based on login status
+if (isLoggedIn) {
+    document.getElementById('visitorMessage').textContent = 'Welcome back!';
+} else {
+    document.getElementById('visitorMessage').textContent = 'Only registered users can access this website.';
 }
 
-function showPosition(position) {
-  var latitude = position.coords.latitude;
-  var longitude = position.coords.longitude;
-  document.getElementById("location").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
-}
-
-// Get the user's location when the page loads
-getLocation();
-
-// Update the location every 5 seconds
-setInterval(getLocation, 5000);
-
-  </script>
+    </script>
 </body>
 <style>
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
 }
 
-#location {
-  font-size: 20px;
+h1 {
+    color: #333;
+}
+
+#visitorMessage {
+    color: #666;
 }
 
 </style>
